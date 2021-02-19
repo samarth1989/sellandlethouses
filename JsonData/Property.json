@@ -1,0 +1,70 @@
+[
+    {
+        "id":"1",
+        "data" :{
+    "address": "240 N Circular",
+    "country": "Ireland",
+    "county": "Dublin",
+    "city": "Dublin",
+    "area": "Dublin 7",
+    "dateAdded": "2021-06-06T18:09:28Z",
+    "features": 
+      [
+        "Air Conditioning","Heating"
+      ],
+    "listingName": "240 N Circular, Dublin",
+    "lotSize": 0.16,
+    "lotSizeUnit": "Acres",
+    "numBathroom": 2,
+    "numBedroom": 4,
+    "eirCode": "21228",
+    "maxPrice": 199900,
+    "minPrice": 199900,
+    "currency": "Euro",
+    "isAvailable": "false", 
+    "propertyType": "Single Family Dwelling",
+    "isUnderContract": "false",
+    "minLeaseMonths": "",
+    "type": "For Sale",
+    "photo":[],
+    "latitude": "12.34",
+    "longitude": "45.67",
+    "description":"Grayling Property Management are delighted to present this beautiful, bright, spacious studio apartment in the heart of the ever popular Rathmines. This apartment comprises a modern kitchen, living/dining area and separate bedroom. The modern bathroom is fitted with a power shower. The apartment features built in wardrobes to ensure ample storage. Rathmines is a vibrant and energetic village just 15 minutes walk from the city centre of Dublin. Within the village there are a wide variety of shopping, dining and entertainment conveniences including Tesco, Lidl, Swan Leisure, Blackbird and Copan to name but a few. Numerous bus routes servicing all parts of the city pass the front door while the nearest LUAS (Ranelagh) is just 12 minutes walk away.Viewing is essential to appreciate this fine property."
+    }
+},
+
+{
+    "id":"2",
+    "data" :{
+"address": "241 N Circular",
+"country": "Ireland",
+"county": "Dublin",
+"city": "Dublin",
+"area": "Dublin 7",
+"dateAdded": "2021-06-06T18:09:28Z",
+"features": 
+  [
+    "Air Conditioning","Heating"
+  ],
+"listingName": "240 N Circular, Dublin",
+"lotSize": 0.16,
+"lotSizeUnit": "Acres",
+"numBathroom": 2,
+"numBedroom": 4,
+"eirCode": "21228",
+"maxPrice": 199900,
+"minPrice": 199900,
+"currency": "Euro",
+"isAvailable": "false", 
+"propertyType": "Single Family Dwelling",
+"isUnderContract": "false",
+"minLeaseMonths": "",
+"type": "For Sale",
+"photo":[],
+"latitude": "12.35",
+"longitude": "45.68",
+"description":"Grayling Property Management are delighted to present this beautiful, bright, spacious studio apartment in the heart of the ever popular Rathmines. This apartment comprises a modern kitchen, living/dining area and separate bedroom. The modern bathroom is fitted with a power shower. The apartment features built in wardrobes to ensure ample storage. Rathmines is a vibrant and energetic village just 15 minutes walk from the city centre of Dublin. Within the village there are a wide variety of shopping, dining and entertainment conveniences including Tesco, Lidl, Swan Leisure, Blackbird and Copan to name but a few. Numerous bus routes servicing all parts of the city pass the front door while the nearest LUAS (Ranelagh) is just 12 minutes walk away.Viewing is essential to appreciate this fine property."
+}
+}
+
+]
