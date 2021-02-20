@@ -1,0 +1,38 @@
+﻿
+body {
+    margin: 0px;
+    background: url('../images/background.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+.mainDiv {
+    width: 95%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 3px solid #e1eae1;
+    border-radius: 7px;
+    min-height: 500px;
+    margin: auto;
+    box-shadow: 2px 4px 10px 2px #888888;
+}
+.subDiv {
+    background: transparent;
+    margin:15%;
+  
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:10px;
+}
