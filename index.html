@@ -1,16 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Accomodation</title>
     <meta charset="UTF-8">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../sellandlethouses/css/styles.css" rel="stylesheet" type="text/css">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="*">
+
     <style>
-   
-		
     </style>
+      
 </head>
-<body>
+
+<body onload="loadJSON()">
     <div class="container">
         <nav class="navigation">
             <ul>
@@ -25,19 +30,104 @@
                 </li>
             </ul>
         </nav>
+       <div class="gallery">
+
+
+
+       </div> 
+
+
+        <div class="dropdown">
+            <!-- <button onclick="showDdl()" class="dropbtn">Filter houses </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#about">Rent</a>
+              <a href="#base">Buy</a>
+            </div> -->
+
+            <select id="picDD" onchange="getComboA(this.options[this.selectedIndex].innerHTML)">
+                <option value="1" selected>Select</option>
+                <option value="2">Buy</option>
+                <option value="3">Rent</option>
+            </select>
+
+          </div>
+
         <article class="content">
             <h1>Main content</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis suscipit velit. Vivamus bibendum, arcu et pulvinar viverra, nibh urna mollis lectus, sed ornare velit turpis sed dui.</p>
-        </article>
-        <aside class="links">
+            <p id="demo"></p>
+    
+            <p>Take a look at <a href="../sellandlethouses/people.json" target="_blank">json_demo.txt</a></p>
+    
+        </article> 
+
+       
+       
+        <!-- <aside class="links">
             Links
         </aside>
         <aside class="ads">
             Ads
-        </aside>
+        </aside> -->
         <footer class="footer">
             The footer
         </footer>
+    
+    
+    
+    
+    
+    
+    
+    
     </div>
-</body>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+    <script>
+
+// $.getJSON("Property_Complete.json", function(json) {
+//     console.log(json); // this will show the info it in firebug console
+// });
+
+
+function loadJSON() {
+var xobj = new XMLHttpRequest();
+xobj.overrideMimeType("application/json");
+xobj.open('GET', 'Property_Complete.json', true);
+xobj.onload = function () {
+    if (xobj.readyState === xobj.DONE) {
+        if (xobj.status === 200) {
+            console.log(xobj.response);
+            console.log(xobj.responseText);
+        }
+    }
+};
+xobj.send(null);
+
+}
+//     $('#picDD').change(function () {
+//      var val = parseInt($('#picDD').val());
+//     $('img').attr("src",pictureList[val]);
+// });
+// loadJSON(function(response) {
+//     alert("here 92");
+//     // Do Something with the response e.g.
+//     jsonresponse = JSON.parse(response);
+
+//     // Assuming json data is wrapped in square brackets as Drew suggests
+//     console.log(jsonresponse[0]);
+
+// });
+                
+    function getComboA(selectObject) {
+        debugger;  
+    console.log(selectObject);
+    }     
+        </script>
+
+  </body>
+
 </html>

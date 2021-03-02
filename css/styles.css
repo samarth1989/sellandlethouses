@@ -15,7 +15,6 @@ img {
 	padding: 10px;
 }
 
-
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -94,10 +93,14 @@ ul {
 }
 .container {
     max-width: 1200px;
+    min-width: 100%;
 }
      .rightalignIL{float:right; } 
     .leftalignIL {
         float:left;
         max-width: inherit;
     }	
-
+     
+      .dropdown a:hover {background-color: #ddd;}
+      
+      .show {display: block;}

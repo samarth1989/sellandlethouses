@@ -24,7 +24,7 @@
         "type": "For Sale",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":[],
+        "photo":["",""],
         "features": [
             "Air Conditioning",
             "Heating"
