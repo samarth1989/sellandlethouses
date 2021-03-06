@@ -104,3 +104,49 @@ ul {
       .dropdown a:hover {background-color: #ddd;}
       
       .show {display: block;}
+
+/* Start details page */
+
+.content{
+float:right;
+}
+
+.panelbox{
+float: right;
+
+}
+
+.leftdiv{
+float: left;
+width: 25%;
+}
+
+.centerdiv{
+    float: left;
+    width: 25%;
+    }
+
+.rightdiv{
+        float: right;
+        width: 25%;
+        }
+
+
+        @media (max-width: 600px) {
+            .leftdiv{
+    float: left;
+width: 100%;
+
+            }
+            .centerdiv{
+                float: left;
+                width: 100%;
+                }
+            
+            .rightdiv{
+                    float: right;
+                    width: 100%;
+                    }            
+
+        }
+       
