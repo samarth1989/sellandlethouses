@@ -15,6 +15,7 @@ img {
 	padding: 10px;
 }
 
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -61,11 +62,7 @@ ul {
 @media (min-width: 600px) {
     .links {
         grid-column: 1 / span 3;
-        grid-row: 3;
-    }
-    .ads {
-        grid-column: 1 / span 3;
-        grid-row: 4;
+        grid-row: 2;
     }
     .content, .footer {
         grid-column: 4 / span 9;
@@ -83,10 +80,6 @@ ul {
     .content {
         grid-column: 3 / span 7;
     }
-    .ads {
-        grid-column: 10 / span 3;
-        grid-row: 3;
-    }
     .footer {
         grid-column: 1 / span 12;
     }
@@ -95,16 +88,13 @@ ul {
     max-width: 1200px;
     min-width: 100%;
 }
-     .rightalignIL{float:right; } 
+     .rightalignIL{float:right; 
+       }
     .leftalignIL {
         float:left;
-        max-width: inherit;
-    }	
-     
+    }	  
       .dropdown a:hover {background-color: #ddd;}
-      
       .show {display: block;}
-
 /* Start details page */
 
 .content{
@@ -113,40 +103,41 @@ float:right;
 
 .panelbox{
 float: right;
-
 }
 
-.leftdiv{
-float: left;
-width: 25%;
-}
-
-.centerdiv{
-    float: left;
-    width: 25%;
-    }
-
-.rightdiv{
-        float: right;
-        width: 25%;
-        }
-
-
-        @media (max-width: 600px) {
-            .leftdiv{
-    float: left;
-width: 100%;
-
-            }
-            .centerdiv{
-                float: left;
-                width: 100%;
-                }
-            
-            .rightdiv{
-                    float: right;
-                    width: 100%;
-                    }            
+    @media (max-width: 600px) {
+                      .leftcolumn{
+                        float: left;
+                        width: 100%;
+                        /* padding: 15px;  */
+                      } 
+                      .rightcolumn{
+                        float: left;
+                        width: 100%;
+                      }    
 
         }
        
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+            padding:0%; 
+          }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding:0%;
+          }
+          
+          /* Clear floats after the columns */
+          .row:after {
+            content: "";
+            /* display: table; */
+            clear: both;
+          }
+          .row>*{
+            padding-left: 15px;
+            padding-right: 15px;
+        }

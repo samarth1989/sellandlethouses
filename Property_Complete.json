@@ -24,7 +24,7 @@
         "type": "For Sale",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":["",""],
+        "photo":["images/1.jpg","images/2.jpg"],
         "features": [
             "Air Conditioning",
             "Heating"
@@ -56,7 +56,7 @@
         "type": "rent",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":[],
+        "photo":["images/1.jpg","images/2.jpg"],
         "features": [
             "Air Conditioning",
             "Heating"
@@ -88,7 +88,7 @@
         "type": "For Sale",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":[],
+        "photo":["images/1.jpg","images/2.jpg"],
         "features": [
             "Air Conditioning",
             "Heating"
@@ -120,7 +120,7 @@
         "type": "rent",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":[],
+        "photo":["images/1.jpg","images/2.jpg"],
         "features": [
             "Air Conditioning",
             "Heating"
@@ -152,7 +152,7 @@
         "type": "For Sale",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":[],
+        "photo":["images/1.jpg","images/2.jpg"],
         "features": [
             "Air Conditioning",
             "Heating"
@@ -184,7 +184,7 @@
         "type": "rent",
         "latitude": "12.34",
         "longitude": "45.67",
-        "photo":[],
+        "photo":["images/1.jpg","images/2.jpg"],
         "features": [
             "Air Conditioning",
             "Heating"
