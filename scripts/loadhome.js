@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
         var jsonData = '';
         // FETCHING jsonData FROM JSON FILE 
         $.getJSON("Property_Complete.json",
@@ -8,15 +7,8 @@ $(document).ready(function () {
                 //console.log(jsonjsonData);
 
     for (var i = 0; i < jsonData.length; i++) {
-        // var type = "";
-        // if (jsonData[i].data.type == 2) {
-        //     type = " Sale ";
-        // }
-        // else {
-        //     type = " Rent ";
-        // }
-        //debugger;
-        //console.log(jsonData[i].data.images[0]);
+
+        console.log(jsonData[i].id);
         var alt = 'Address: ' + jsonData[i].data.address + "<br />" + ' County: ' + jsonData[i].data.county + ' Area: ' + jsonData[i].data.area + "<br />";
         var alt1 = jsonData[i].data.numBedroom + 'BHK' + ' For ' + 'type' + 'Price: ' + jsonData[i].data.maxPrice;
         var mhtml = "";
@@ -25,7 +17,7 @@ $(document).ready(function () {
         mhtml += '<a href="HouseDetails.html?id=' + jsonData[i].id + '" style="color:blue;font-weight:15pt;">' + alt + '</a>';
         mhtml += '<a href="HouseDetails.html?id=' + jsonData[i].id + '">' + alt1 + '</a>';
 
-        console.log(mhtml)
+        //console.log(mhtml)
         $('#mydiv').append(mhtml);
     }
 })

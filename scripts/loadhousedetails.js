@@ -9,7 +9,6 @@
             // FETCHING DATA FROM JSON FILE 
             $.getJSON("Property_Complete.json",
                 function (data) {
-                    debugger;
                     dataJson = data[propId].data;
                     //console.log(dataJson);
                     
