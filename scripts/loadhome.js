@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var jsonData = '';
     // FETCHING jsonData FROM JSON FILE 
-    $.getJSON("Property_Complete.json",
+    $.getJSON("property_complete.json",
         function (jsonData) {
             arrangeProps(jsonData)
         })
@@ -25,7 +25,7 @@ function ddlTypeFunction() {
     // populate the prices drop-down 
     setOptions(inputPrice, prices[valF]);
 
-    $.getJSON("Property_Complete.json",
+    $.getJSON("property_complete.json",
         function (jsonData) {
             //console.log(valF);
             if (valF != 'select')
@@ -49,7 +49,7 @@ function ddlPricesFunction() {
 
     //console.log(valPr.slice(3));
 
-    $.getJSON("Property_Complete.json",
+    $.getJSON("property_complete.json",
         function (jsonData) {
             //console.log(valF);
             filteredJson = jsonData.filter(item => (item.data.type.toLowerCase() == valF));

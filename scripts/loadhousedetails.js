@@ -7,7 +7,7 @@
 
             var dataJson = '';
             // FETCHING DATA FROM JSON FILE 
-            $.getJSON("Property_Complete.json",
+            $.getJSON("property_complete.json",
                 function (data) {
                     dataJson = data[propId].data;
                     //console.log(dataJson);
