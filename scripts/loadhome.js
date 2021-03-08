@@ -1,10 +1,33 @@
 $(document).ready(function () {
-        var jsonData = '';
-        // FETCHING jsonData FROM JSON FILE 
-        $.getJSON("Property_Complete.json",
-            function (jsonData) {
-                //debugger;
-                //console.log(jsonjsonData);
+    var jsonData = '';
+    // FETCHING jsonData FROM JSON FILE 
+    $.getJSON("Property_Complete.json",
+        function (jsonData) {
+            //debugger;
+            //console.log(jsonjsonData);
+            arrangeProps(jsonData)
+        })
+});
+
+function ddlSelFunction() {
+
+    $.getJSON("Property_Complete.json",
+        function (jsonData) {
+            debugger;
+            //console.log(jsonjsonData);
+            input = document.getElementById("filter");
+            valF = input.options[input.selectedIndex].text.toLowerCase();
+            console.log(valF);
+            filteredJson = jsonData.filter(item => !(item.data.type.toLowerCase() == valF));
+            // ar = [1, 2, 3, 4];
+            // ar = ar.filter(item => !(item > 3));
+            //console.log(filteredJson) ;// [1, 2, 3]
+            $("#mydiv").html("");
+            arrangeProps(filteredJson);
+        })
+}
+
+function arrangeProps(jsonData) {
 
     for (var i = 0; i < jsonData.length; i++) {
 
@@ -20,7 +43,5 @@ $(document).ready(function () {
         //console.log(mhtml)
         $('#mydiv').append(mhtml);
     }
-})
-});
-
+}
 
