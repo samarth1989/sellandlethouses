@@ -22,40 +22,43 @@
         </nav>
 
         <div class="dropdown">
-
-            <select id="filterType" onchange="ddlTypeFunction()">
-                <option value="-1" selected>Select</option>
-                <option value="1">Buy</option>
-                <option value="2">Rent</option>
-            </select>
-
-            <select id="filterPrice" onchange="ddlPricesFunction()" >
-                <option value="-1" selected>Select</option>
-            </select>
+            <div class="ddType">
+                Type:
+                <select id="filterType" class="dd" onchange="ddlTypeFunction()">
+                    <option value="-1" selected>Select</option>
+                    <option value="1">Buy</option>
+                    <option value="2">Rent</option>
+                </select>
+            </div>
+            <div class="ddPrice">
+                Price:
+                <select id="filterPrice" class="dd" onchange="ddlPricesFunction()">
+                    <option value="-1" selected>Select</option>
+                </select>
+            </div>
 
         </div>
 
-        <article class="content">
-            <div id="mydiv">
+        <article class="">
+            <div id="mydiv" class="contentDiv">
             </div>
-            
+
         </article>
         <footer class="footer">
-            
-            The footer
+            This is a sample webpage done by Samarth &amp; Jithin
         </footer>
 
     </div>
 
     <script>
-           
+
     </script>
 
     <script data-require="jquery@2.1.4" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../sellandlethouses/scripts/loadhome.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="*">
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="*">
     <script type="text/javascript">
     </script>
 </body>

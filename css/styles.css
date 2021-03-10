@@ -1,53 +1,119 @@
 html {
-	box-sizing: border-box;
-	font-family: arial, helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: arial, helvetica, sans-serif;
 }
+
+body {
+    background: #f4f4f4 !important;
+}
+
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
-*,*:before,*:after {
-	box-sizing: inherit;
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
-.container {
-	margin: 30px;
-}
+
 .container > * {
-	padding: 10px;
+    padding: 10px;
 }
 
 
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-  }
-  
-  /* li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* li {
 	float: left;
   } */
-  
-  li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-	background-color: #111;
-  }
-  
-  .active {
-	background-color: #4CAF50;
-  }
 
-  .container {
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+.active {
+    background-color: #4CAF50;
+}
+
+.container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 10px;
+}
+
+.dropdown {
+    background-color: #333;
+    color: white;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.ddType {
+    width: 50%;
+    float: left;
+}
+
+.ddPrice {
+    width: 50%;
+    float: left;
+}
+
+.dd {
+    border-radius: 10px;
+    width: 100px;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+}
+
+.contentDiv {
+    background: white;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid grey;
+    align-content: center;
+    overflow-x: scroll;
+    height: 800px;
+    box-shadow: 0px 0px 20px 0px cornflowerblue;
+}
+
+.imgDiv {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+    .imgDiv img {
+        height: 400px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+.footer {
+    background: #333;
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
 }
 /*  nav ul {
     list-style: none;
@@ -55,17 +121,18 @@ ul {
     padding: 0;
     
 } */
-
 .container > * {
     grid-column: 1 / span 12;
 }
+
 @media (min-width: 600px) {
     .links {
         grid-column: 1 / span 3;
         grid-row: 2;
     }
+
     .content, .footer {
-        grid-column: 4 / span 9;
+        /*grid-column: 4 / span 9;*/
     }
     /* nav ul {
          display: flex; 
@@ -73,71 +140,204 @@ ul {
 
     } */
 }
+
 @media (min-width: 900px) {
     .links {
         grid-column: 1 / span 2;
     }
+
     .content {
         grid-column: 3 / span 7;
     }
+
     .footer {
         grid-column: 1 / span 12;
     }
 }
+
 .container {
     max-width: 1200px;
     min-width: 100%;
 }
-     .rightalignIL{float:right; 
-       }
-    .leftalignIL {
-        float:left;
-    }	  
-      .dropdown a:hover {background-color: #ddd;}
-      .show {display: block;}
+
+.rightalignIL {
+    float: right;
+}
+
+.leftalignIL {
+    float: left;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
 /* Start details page */
 
-.content{
-float:right;
+.content {
+    float: right;
 }
 
-.panelbox{
-float: right;
+.panelbox {
+    float: right;
 }
 
-    @media (max-width: 600px) {
-                      .leftcolumn{
-                        float: left;
-                        width: 100%;
-                        /* padding: 15px;  */
-                      } 
-                      .rightcolumn{
-                        float: left;
-                        width: 100%;
-                      }    
+@media (min-width: 1400px) {
 
+
+    .contentDiv {
+        background: white;
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+        overflow-x: scroll;
+        height: 800px;
+        box-shadow: 0px 0px 20px 0px cornflowerblue;
+    }
+
+    .imgDiv {
+        width: 100%;
+        height: 500px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+        .imgDiv img {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
         }
-       
+}
 
-        .leftcolumn {
-            float: left;
-            width: 75%;
-            padding:0%; 
-          }
+@media (max-width: 900px) {
+    .dropdown {
+        width: 100%;
+    }
 
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding:0%;
-          }
-          
-          /* Clear floats after the columns */
-          .row:after {
-            content: "";
-            /* display: table; */
-            clear: both;
-          }
-          .row>*{
-            padding-left: 15px;
-            padding-right: 15px;
+    .ddType {
+        width: 100%;
+    }
+
+    .ddPrice {
+        width: 100%;
+    }
+    .dd{
+        width:80%;
+    }
+    .contentDiv {
+        background: white;
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        overflow-x: scroll;
+        height: 800px;
+        box-shadow: 0px 0px 20px 0px cornflowerblue;
+    }
+
+    .leftcolumn {
+        float: left;
+        width: 100%;
+        /* padding: 15px;  */
+    }
+
+    .rightcolumn {
+        float: left;
+        width: 100%;
+    }
+
+    .imgDiv {
+        width: 100%;
+        height: 350px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+        .imgDiv img {
+            height: 250px;
+            width: 100%;
+            border-radius: 10px;
         }
+}
+
+@media (max-width: 600px) {
+    .leftcolumn {
+        float: left;
+        width: 100%;
+        /* padding: 15px;  */
+    }
+
+    .rightcolumn {
+        float: left;
+        width: 100%;
+    }
+
+    .contentDiv {
+        background: white;
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        overflow-x: scroll;
+        height: 800px;
+        box-shadow: 0px 0px 20px 0px cornflowerblue;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .ddType {
+        width: 100%;
+    }
+
+
+    .ddPrice {
+        width: 100%;
+    }
+
+    .dd {
+        width: 80%;
+    }
+    .imgDiv {
+        width: 100%;
+        height: 250px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+        .imgDiv img {
+            height: 150px;
+            width: 100%;
+            border-radius: 10px;
+        }
+}
+
+
+.leftcolumn {
+    float: left;
+    width: 100%;
+    padding: 0%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 100%;
+    padding: 0%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    /* display: table; */
+    clear: both;
+}
+
+.row > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.mySlides {
+    display: none;
+}
