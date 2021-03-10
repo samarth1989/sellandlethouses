@@ -341,3 +341,25 @@ li a {
 .mySlides {
     display: none;
 }
+.ghost-button {
+    color: #009688;
+    background: #fff;
+    border: 1px solid #009688;
+    font-size: 24px;
+    font-weight:bold;
+    padding: 7px 12px;
+    font-weight: normal;
+    margin: auto;
+    display: inline-block;
+    text-decoration: none;
+    text-align:center;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    border-radius:10px;
+}
+
+    .ghost-button:hover, .ghost-button:active {
+        color: #fff;
+        background: #009688;
+        text-decoration: none;
+    }

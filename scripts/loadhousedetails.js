@@ -20,18 +20,17 @@ $(document).ready(function () {
             for (var i = 0; i < dataJson.photo.length; i++) {
 
                 mhtml += '<img class="mySlides" src="' + dataJson.photo[i] + '" style="width:100%"/>';
-                debugger;
             }
             var mhtml1 = '<p>' + alt + '</p>';
-            mhtml1 += '<p>' + alt1 + '</p>';
-            mhtml1 += '<p>' + dataJson.address + '</p>';
+            mhtml1 += '<p style="font-weight:bold;">' + alt1 + '</p>';
             mhtml1 += '<p>' + dataJson.description + '</p>';
+            mhtml1 += '<a href="appointment.html?id=' + propId + '" class="ghost-button">Make Appointment</a>';
             //console.log(mhtml)
             $('#c123').append(mhtml);
             $('#c1234').append(mhtml1);
-
-
-
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
         })
 });
 function getParameterByName(name, url = window.location.href) {
@@ -43,4 +42,14 @@ function getParameterByName(name, url = window.location.href) {
     if (!results) return null;
     if (!results[2]) return '';
     return (decodeURIComponent(results[2].replace(/\+/g, ' ')));
+}
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
 }
