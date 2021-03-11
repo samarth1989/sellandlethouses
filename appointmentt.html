@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Appointment</title>
     <meta charset="UTF-8">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/appt_styles.css" rel="stylesheet" type="text/css">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
 
@@ -22,32 +23,31 @@
         </nav>
 
 
-        <form>
-            <div id="toast"></div>
+        <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8">
             <fieldset>
                 <legend class="top-middle">Book Appointment</legend>
                 <label>
                     Name
                     <input type="text" name="name" required>
                 </label>
-                <div>
+                <div class="two-cols">
                     <label>
                         Email address
                         <input type="email" name="email" required>
                     </label>
                     <label>
                         Phone number
-                        <input type="tel" name="phone" required>
+                        <input type="tel" name="phone">
                     </label>
                 </div>
             </fieldset>
             <fieldset>
-                <div>
+                <div class="two-cols">
                     <label>
-                        Date
+                        Datum
                         <input type="date" name="Appointment request" required>
                     </label>
-                    <div>
+                    <div class="inline">
                         <label>
                             <input type="hidden" name="Morning desired" value="no">
                             <input type="checkbox" name="Morning desired" value="yes">
@@ -60,17 +60,32 @@
                         </label>
                     </div>
                 </div>
-
+                <p>Confirmation requested by</p>
+                <div class="inline">
+                    <label>
+                        <input type="radio" name="Confirmation requested by" value="email" checked>
+                        Email
+                    </label>
+                    <label>
+                        <input type="radio" name="Confirmation requested by" value="phone">
+                        Phone call
+                    </label>
+                </div>
             </fieldset>
             <div class="btns">
-                
-                <input type="submit" value="Submit request" onclick="showToast('Appointment Successful')">
+                <input type="text" name="_gotcha" value="" style="display:none;">
+                <input type="submit" value="Submit request" onclick="displayMsg()">
+            </div>
+            <div id="apptMsg">
+                <p>Appointment successful.</p>
             </div>
 
         </form>
 
         <footer class="footer">
-            This is a sample webpage done by Samarth &amp; Jithin
+
+            The footer
+
         </footer>
 
     </div>
@@ -83,19 +98,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="*">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="*">
 
+    <script src="../sellandlethouses/scripts/loadhome.js">
 
-    <script type="text/javascript">
-        
-        function showToast(text) {
-            var x = document.getElementById("toast");
-            x.classList.add("show");
-            x.innerHTML = text;
-            setTimeout(function () {
-                x.classList.remove("show");
-                //window.location = 'Home.html';
-            }, 5000);
+        function myFunction() {
+            var x = document.getElementById("apptMsg");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
     </script>
 </body>

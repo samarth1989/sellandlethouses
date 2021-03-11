@@ -24,7 +24,7 @@ $(document).ready(function () {
             var mhtml1 = '<p>' + alt + '</p>';
             mhtml1 += '<p style="font-weight:bold;">' + alt1 + '</p>';
             mhtml1 += '<p>' + dataJson.description + '</p>';
-            mhtml1 += '<a href="appointment.html?id=' + propId + '" class="ghost-button">Make Appointment</a>';
+            mhtml1 += '<a href="appointment.html?id=' + propId + '" class="buttonnn">Make Appointment</a>';
             //console.log(mhtml)
             $('#c123').append(mhtml);
             $('#c1234').append(mhtml1);

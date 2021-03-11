@@ -341,7 +341,7 @@ li a {
 .mySlides {
     display: none;
 }
-.ghost-button {
+.buttonnn {
     color: #009688;
     background: #fff;
     border: 1px solid #009688;
@@ -358,8 +358,40 @@ li a {
     border-radius:10px;
 }
 
-    .ghost-button:hover, .ghost-button:active {
+    .buttonnn:hover, .buttonnn:active {
         color: #fff;
         background: #009688;
         text-decoration: none;
     }
+#toast {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    visibility: hidden;
+    opacity: 0;
+}
+
+    #toast.show {
+        visibility: visible;
+        animation: fadeInOut 5s;
+    }
+
+@keyframes fadeInOut {
+    5%,95% {
+        opacity: 1;
+        top: 80px
+    }
+
+    15%,85% {
+        opacity: 1;
+        top: 30px
+    }
+}
