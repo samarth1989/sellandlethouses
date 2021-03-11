@@ -11,8 +11,8 @@ $(document).ready(function () {
 function ddlTypeFunction() {
     var prices = {
         'select': ['Select'],
-        'rent': ['Select', '< \u20ac500', '< \u20ac1000', '< \u20ac1500', '< \u20ac2000', '> \u20ac2000'],
-        'buy': ['Select', '< \u20ac50000', '< \u20ac100000', '< \u20ac150000', '< \u20ac200000', '> \u20ac200000']
+        'rent': ['Select', '< \u20ac500', '< \u20ac1000', '< \u20ac1500', '< \u20ac2000', '< \u20ac2500'],
+        'buy': ['Select', '< \u20ac50000', '< \u20ac100000', '< \u20ac150000', '< \u20ac200000', '< \u20ac300000']
     }
 
     // just grab references to the two drop-downs
