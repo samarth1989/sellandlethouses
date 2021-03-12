@@ -10,7 +10,7 @@ $(document).ready(function () {
     // FETCHING DATA FROM JSON FILE 
     $.getJSON("property_complete.json",
         function (data) {
-            debugger;
+            //debugger;
             dataJson = data[propId].data;
             //console.log(dataJson);
 
