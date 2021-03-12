@@ -16,61 +16,55 @@
                     <a href="../sellandlethouses/home.html">Home</a>
                 </li>
                 <li class="rightalignIL">
-                    <a href="#">About</a>
+                    <a href="#foot">Contact Us</a>
                 </li>
             </ul>
         </nav>
 
 
-        <form>
-            <div id="toast"></div>
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+            <div id="toast"> Appointment Booked</div>
             <fieldset>
-                <legend class="top-middle">Book Appointment</legend>
+                <legend>Book Appointment</legend>
                 <label>
                     Name
-                    <input type="text" name="name" required>
                 </label>
+                <input type="text" name="name" class="textt" placeholder="Ryan Reynolds">
                 <div>
                     <label>
                         Email address
-                        <input type="email" name="email" required>
                     </label>
+                    <input type="email" name="email" class="textt" placeholder="me@example.com">
+
                     <label>
                         Phone number
-                        <input type="tel" name="phone" required>
                     </label>
+                    <input type="tel" name="phone" class="textt" placeholder="0897777777" pattern="[0-9]{10}">
                 </div>
             </fieldset>
             <fieldset>
                 <div>
                     <label>
                         Date
-                        <input type="date" name="Appointment request" required>
                     </label>
-                    <div>
-                        <label>
-                            <input type="hidden" name="Morning desired" value="no">
-                            <input type="checkbox" name="Morning desired" value="yes">
-                            Morning
-                        </label>
-                        <label>
-                            <input type="hidden" name="Afternoon desired" value="no">
-                            <input type="checkbox" name="Afternoon desired" value="yes">
-                            Afternoon
-                        </label>
-                    </div>
+                    <input type="date" class="textt" name="date">
+
                 </div>
 
             </fieldset>
-            <div class="btns">
-                
-                <input type="submit" value="Submit request" onclick="showToast('Appointment Successful')">
+            <br />
+            <div>
+                <input type="submit" value="Submit" class="buttonnn" OnClick="showToast()">
             </div>
 
         </form>
 
-        <footer class="footer">
-            This is a sample webpage done by Samarth &amp; Jithin
+        <footer id="foot" class="footer">
+            45 Amiens Street<br />
+            Near Connolly Station<br />
+            Dublin 01<br />
+            Tel : 0897777777 , Fax : +1 323 555 1234<br />
+            Email : contactus@buynrenthouse.com
         </footer>
 
     </div>
@@ -87,16 +81,39 @@
 
 
     <script type="text/javascript">
-        
-        function showToast(text) {
-            var x = document.getElementById("toast");
-            x.classList.add("show");
-            x.innerHTML = text;
-            setTimeout(function () {
-                x.classList.remove("show");
-                //window.location = 'Home.html';
-            }, 5000);
+
+        function validateForm() {
+            var x = document.forms["myForm"]["name"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["phone"].value;
+            if (x == "") {
+                alert("Please enter your number");
+                return false;
+            }
+            var x = document.forms["myForm"]["date"].value;
+            if (x == "") {
+                alert("Please select a Date");
+                return false;
+            }
         }
+        function showToast() {
+
+            var x = document.getElementById("toast");
+            x.className = "show";
+            debugger;
+            setTimeout(function () {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        }
+
     </script>
 </body>
 

@@ -1,6 +1,7 @@
 
 
-var propId = getParameterByName('id');
+var propId = parseInt(getParameterByName('id'),10)-1;
+
 //console.log(propId);
 
 $(document).ready(function () {
@@ -9,6 +10,7 @@ $(document).ready(function () {
     // FETCHING DATA FROM JSON FILE 
     $.getJSON("property_complete.json",
         function (data) {
+            debugger;
             dataJson = data[propId].data;
             //console.log(dataJson);
 
