@@ -362,12 +362,12 @@
   {
     "id": 19,
     "data": {
-      "address": "Coolock Drive/Greencastle Road (Chiver's site)",
+      "address": "Coolock Drive/Greencastle Road",
       "country": "Ireland",
       "county": "Dublin",
       "city": "Dublin",
       "area": "Dublin 17",
-      "listingName": "Coolock Drive/Greencastle Road (Chiver's site), Dublin",
+      "listingName": "Coolock Drive/Greencastle Road, Dublin",
       "numBedroom": "5",
       "maxPrice": "280000",
       "type": "buy",

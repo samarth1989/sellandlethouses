@@ -103,25 +103,26 @@
                 alert("Please select a Date");
                 return false;
             }
-            //debugger;
-            //if (x != "" && y != "" && z != "" && d != "") {
-                var x = document.getElementById("toast");
-                x.className = "show";
-                setTimeout(function () {
-                    x.className = x.className.replace("show", "");
-                }, 5000);
-            //}
-            //else {
-            //    return false;
-            //}
+            debugger;
+            if (x != "" && y != "" && z != "" && d != "") {
+                //var x = document.getElementById("toast");
+                //x.className = "show";
+                //setTimeout(function () {
+                //    x.className = x.className.replace("show", "");
+                //}, 5000);
+                alert("Appointment Booked");
+            }
+            else {
+                return false;
+            }
         }
-        //function showToast() {
-        //    var x = document.getElementById("toast");
-        //    x.className = "show";
-        //    setTimeout(function () {
-        //        x.className = x.className.replace("show", "");
-        //    }, 3000);
-        //}
+            //function showToast() {
+            //    var x = document.getElementById("toast");
+            //    x.className = "show";
+            //    setTimeout(function () {
+            //        x.className = x.className.replace("show", "");
+            //    }, 3000);
+            //}
 
     </script>
 </body>

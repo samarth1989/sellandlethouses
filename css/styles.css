@@ -123,7 +123,7 @@ li a {
 .container > * {
     grid-column: 1 / span 12;
 }
-
+/**/
 @media (min-width: 600px) {
     .links {
         grid-column: 1 / span 3;
@@ -184,7 +184,7 @@ li a {
     float: right;
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 1200px) {
 
 
     .contentDiv {
@@ -193,6 +193,21 @@ li a {
         width: 80%;
         margin: auto;
         box-shadow: 0px 0px 20px 0px cornflowerblue;
+    }
+    .dropdown {
+        width: 100%;
+    }
+
+    .ddType {
+        width: 100%;
+    }
+
+    .ddPrice {
+        width: 100%;
+    }
+
+    .dd {
+        width: 80%;
     }
 
     .imgDiv {
@@ -208,7 +223,7 @@ li a {
             border-radius: 10px;
         }
 }
-
+/* Compatible for tablet devices since the max-width is 900px* All the columns are resizing to 100% width */
 @media (max-width: 900px) {
     .dropdown {
         width: 100%;
@@ -258,7 +273,7 @@ li a {
             border-radius: 10px;
         }
 }
-
+/* Compatible for mobile devices since the max-width is 600px* All the columns are resizing to 100% width */
 @media (max-width: 600px) {
     .leftcolumn {
         float: left;
@@ -299,6 +314,57 @@ li a {
     .imgDiv {
         width: 100%;
         height: 250px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+        .imgDiv img {
+            height: 150px;
+            width: 100%;
+            border-radius: 10px;
+        }
+}
+
+@media (max-width: 320px) {
+    .leftcolumn {
+        float: left;
+        width: 100%;
+        /* padding: 15px;  */
+    }
+
+    .rightcolumn {
+        float: left;
+        width: 100%;
+    }
+
+    .contentDiv {
+        background: white;
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        box-shadow: 0px 0px 20px 0px cornflowerblue;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .ddType {
+        width: 100%;
+    }
+
+
+    .ddPrice {
+        width: 100%;
+    }
+
+    .dd {
+        width: 80%;
+    }
+
+    .imgDiv {
+        width: 100%;
+        height: 300px;
         margin: auto;
         border-radius: 10px;
     }
@@ -371,7 +437,7 @@ input {
     width: 100%;
 }
 
-#toast {
+/*#toast {
     position: fixed;
     top: 0;
     left: 50%;
@@ -385,9 +451,9 @@ input {
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     visibility: hidden;
     opacity: 0;
-}
+}*/
 
-#toast.show {
+/*#toast.show {
     visibility: visible;
     -webkit-animation: fadeInOut 30s;
     animation: fadeInOut 30s;
@@ -403,4 +469,4 @@ input {
         opacity: 1;
         top: 30px
     }
-}
+}*/
