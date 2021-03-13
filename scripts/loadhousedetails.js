@@ -1,6 +1,7 @@
 
 
-var propId = parseInt(getParameterByName('id'),10)-1;
+var propId = parseInt(getParameterByName('id'), 10) - 1;
+var pid = getParameterByName('id');
 
 //console.log(propId);
 
@@ -10,7 +11,6 @@ $(document).ready(function () {
     // FETCHING DATA FROM JSON FILE 
     $.getJSON("property_complete.json",
         function (data) {
-            debugger;
             dataJson = data[propId].data;
             //console.log(dataJson);
 
@@ -26,9 +26,9 @@ $(document).ready(function () {
             var mhtml1 = '<p>' + alt + '</p>';
             mhtml1 += '<p style="font-weight:bold;">' + alt1 + '</p>';
             mhtml1 += '<p>' + dataJson.description + '</p>';
-            mhtml1 += '<a href="appointment.html?id=' + propId + '" class="buttonnn">Make Appointment</a>';
+            mhtml1 += '<a href="appointment.html?id=' + pid + '" class="buttonnn">Make Appointment</a>';
             //console.log(mhtml)
-            $('#c123').append(mhtml);
+            $('#c123').append(mhtml); 
             $('#c1234').append(mhtml1);
             var slideIndex = 1;
             showDivs(slideIndex);
