@@ -56,7 +56,7 @@ function ddlPricesFunction() {
             //console.log(valPr.slice(3));
             if (valPr.toLowerCase() != 'select')
                 filteredJson = filteredJson.filter(item => (parseInt(item.data.maxPrice) < valPr.slice(3)));
-            console.log(filteredJson.length);
+            //console.log(filteredJson.length);
             $("#mydiv").html("");
             arrangeProps(filteredJson);
         })
