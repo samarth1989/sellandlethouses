@@ -5,14 +5,19 @@ $(document).ready(function () {
         function (jsonData) {
             arrangeProps(jsonData)
         })
+
+    $("#filterPrice").prop("disabled", "disabled");
+    $("#filterType").click(function () {
+        $("#filterPrice").removeAttr("disabled");
+    });
 });
 
 //Filtering the houses from json based on the type filter selected and setting the values in price dropdown
 function ddlTypeFunction() {
     var prices = {
-        'select': ['Select'],
-        'rent': ['Select', '< \u20ac500', '< \u20ac1000', '< \u20ac1500', '< \u20ac2000', '< \u20ac2500'],
-        'buy': ['Select', '< \u20ac50000', '< \u20ac100000', '< \u20ac150000', '< \u20ac200000', '< \u20ac300000']
+        'show all': ['Show all'],
+        'rent': ['Show all', '< \u20ac500', '< \u20ac1000', '< \u20ac1500', '< \u20ac2000', '< \u20ac2500'],
+        'buy': ['Show all', '< \u20ac50000', '< \u20ac100000', '< \u20ac150000', '< \u20ac200000', '< \u20ac300000']
     }
 
     // just grab references to the two drop-downs
@@ -21,14 +26,14 @@ function ddlTypeFunction() {
 
     valF = inputType.options[inputType.selectedIndex].text.toLowerCase();
 
-
+    
     // populate the prices drop-down 
     setOptions(inputPrice, prices[valF]);
 
     $.getJSON("property_complete.json",
         function (jsonData) {
             //console.log(valF);
-            if (valF != 'select')
+            if (valF != 'show all')
                 filteredJson = jsonData.filter(item => (item.data.type.toLowerCase() == valF));
             //console.log(filteredJson.length)
             $("#mydiv").html("");
@@ -54,7 +59,7 @@ function ddlPricesFunction() {
             //console.log(valF);
             filteredJson = jsonData.filter(item => (item.data.type.toLowerCase() == valF));
             //console.log(valPr.slice(3));
-            if (valPr.toLowerCase() != 'select')
+            if (valPr.toLowerCase() != 'show all')
                 filteredJson = filteredJson.filter(item => (parseInt(item.data.maxPrice) < valPr.slice(3)));
             //console.log(filteredJson.length);
             $("#mydiv").html("");
