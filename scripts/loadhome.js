@@ -5,11 +5,7 @@ $(document).ready(function () {
         function (jsonData) {
             arrangeProps(jsonData)
         })
-
     $("#filterPrice").prop("disabled", "disabled");
-    $("#filterType").click(function () {
-        $("#filterPrice").removeAttr("disabled");
-    });
 });
 
 //Filtering the houses from json based on the type filter selected and setting the values in price dropdown
@@ -26,15 +22,20 @@ function ddlTypeFunction() {
 
     valF = inputType.options[inputType.selectedIndex].text.toLowerCase();
 
-    
+
     // populate the prices drop-down 
     setOptions(inputPrice, prices[valF]);
 
     $.getJSON("property_complete.json",
         function (jsonData) {
             //console.log(valF);
-            if (valF != 'show all')
+            if (valF != 'show all') {
                 filteredJson = jsonData.filter(item => (item.data.type.toLowerCase() == valF));
+                $("#filterPrice").removeAttr("disabled");
+            }
+            else {
+                $("#filterPrice").prop("disabled", "disabled");
+            }
             //console.log(filteredJson.length)
             $("#mydiv").html("");
             arrangeProps(filteredJson);
