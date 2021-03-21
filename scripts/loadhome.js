@@ -72,10 +72,10 @@ function ddlPricesFunction() {
 //Making dynamic html code using the json data
 
 function arrangeProps(jsonData) {
-    var mhtml = "";
+    debugger;
     if (jsonData.length > 0) {
         for (var i = 0; i < jsonData.length; i++) {
-
+            var mhtml = "";
             //console.log(jsonData[i].id);
             var alt = 'Address: ' + jsonData[i].data.address + "<br />" + ' County: ' + jsonData[i].data.county + ' Area: ' + jsonData[i].data.area + "<br />";
             var alt1 = jsonData[i].data.numBedroom + 'BHK' + ' For ' + jsonData[i].data.type + ' Price: ' + jsonData[i].data.maxPrice;
@@ -87,6 +87,7 @@ function arrangeProps(jsonData) {
         $("#lblMsg").css('visibility', 'hidden');
     }
     else {
+        var mhtml = "";
         mhtml += '<div class="lblDiv"><label class="lblMsg">Sorry!!! No properties available under this category</label></div>';
         $('#mydiv').append(mhtml);
     }
