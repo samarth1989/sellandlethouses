@@ -72,7 +72,6 @@ function ddlPricesFunction() {
 //Making dynamic html code using the json data
 
 function arrangeProps(jsonData) {
-    debugger;
     if (jsonData.length > 0) {
         for (var i = 0; i < jsonData.length; i++) {
             var mhtml = "";
