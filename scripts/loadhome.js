@@ -72,17 +72,22 @@ function ddlPricesFunction() {
 //Making dynamic html code using the json data
 
 function arrangeProps(jsonData) {
-    for (var i = 0; i < jsonData.length; i++) {
+    var mhtml = "";
+    if (jsonData.length > 0) {
+        for (var i = 0; i < jsonData.length; i++) {
 
-        //console.log(jsonData[i].id);
-        var alt = 'Address: ' + jsonData[i].data.address + "<br />" + ' County: ' + jsonData[i].data.county + ' Area: ' + jsonData[i].data.area + "<br />";
-        var alt1 = jsonData[i].data.numBedroom + 'BHK' + ' For ' + jsonData[i].data.type + ' Price: ' + jsonData[i].data.maxPrice;
-        var mhtml = "";
-
-        mhtml += '<div class="imgDiv"><a href="housedetails.html?id=' + jsonData[i].id + '"><img src="' + jsonData[i].data.photo[0] + '" href="HouseDetails.html?id=' + jsonData[i].id + '"/></a>';
-        mhtml += '<a href="HouseDetails.html?id=' + jsonData[i].id + '" style="color:blue;font-weight:15pt;">' + alt + '</a>';
-        mhtml += '<a href="HouseDetails.html?id=' + jsonData[i].id + '">' + alt1 + '</a></div>';
-
+            //console.log(jsonData[i].id);
+            var alt = 'Address: ' + jsonData[i].data.address + "<br />" + ' County: ' + jsonData[i].data.county + ' Area: ' + jsonData[i].data.area + "<br />";
+            var alt1 = jsonData[i].data.numBedroom + 'BHK' + ' For ' + jsonData[i].data.type + ' Price: ' + jsonData[i].data.maxPrice;
+            mhtml += '<div class="imgDiv"><a href="housedetails.html?id=' + jsonData[i].id + '"><img src="' + jsonData[i].data.photo[0] + '" href="HouseDetails.html?id=' + jsonData[i].id + '"/></a>';
+            mhtml += '<a href="HouseDetails.html?id=' + jsonData[i].id + '" style="color:blue;font-weight:15pt;">' + alt + '</a>';
+            mhtml += '<a href="HouseDetails.html?id=' + jsonData[i].id + '">' + alt1 + '</a></div>';
+            $('#mydiv').append(mhtml);
+        }
+        $("#lblMsg").css('visibility', 'hidden');
+    }
+    else {
+        mhtml += '<div class="lblDiv"><label class="lblMsg">Sorry!!! No properties available under this category</label></div>';
         $('#mydiv').append(mhtml);
     }
 }

@@ -21,7 +21,7 @@ $(document).ready(function () {
 
             for (var i = 0; i < dataJson.photo.length; i++) {
 
-                mhtml += '<img class="mySlides" src="' + dataJson.photo[i] + '" style="width:100%"/>';
+                mhtml += '<img class="mySlides" src="' + dataJson.photo[i] + '"/>';
             }
             var mhtml1 = '<p>' + alt + '</p>';
             mhtml1 += '<p style="font-weight:bold;">' + alt1 + '</p>';
