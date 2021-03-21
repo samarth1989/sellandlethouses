@@ -28,6 +28,7 @@ function ddlTypeFunction() {
 
     $.getJSON("property_complete.json",
         function (jsonData) {
+            filteredJson = jsonData;
             //console.log(valF);
             if (valF != 'show all') {
                 filteredJson = jsonData.filter(item => (item.data.type.toLowerCase() == valF));
@@ -72,7 +73,6 @@ function ddlPricesFunction() {
 //Making dynamic html code using the json data
 
 function arrangeProps(jsonData) {
-    debugger;
     if (jsonData.length > 0) {
         for (var i = 0; i < jsonData.length; i++) {
             var mhtml = "";
